@@ -28,10 +28,16 @@ private:
 public:
 
 	//	constructior
-	Travels():tripdistance(0), travelname("") { tottrip++; }
+	Travels():tripdistance(0), travelname("") { 
+		tottrip++; 
+		cout << tottrip << " object created..." << endl;
+	}
 
 	//	destructor
-	~Travels(){}
+	~Travels(){
+		cout << tottrip << " object destroyed..." << endl;
+		tottrip--;
+	}
 
 	//	accessors
 	void totaltravel() { totdistance += tripdistance; }
