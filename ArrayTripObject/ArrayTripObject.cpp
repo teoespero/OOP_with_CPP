@@ -1,4 +1,5 @@
-//  ArrayTripObject.cpp : This file contains the 'main' function. Program execution begins and ends there.
+////////////////////////////////////////////////////////////////////////////////
+//  ArrayTripObject.cpp 
 //  Teodulfo Espero
 //  BS Cloud and Systems Administration
 //  BS Software Development
