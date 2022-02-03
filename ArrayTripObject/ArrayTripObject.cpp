@@ -3,11 +3,11 @@
 //  BS Cloud and Systems Administration
 //  BS Software Development
 //  Western Governors University
-
+////////////////////////////////////////////////////////////////////////////////
 #include <iostream>
 
 using namespace std;
-
+////////////////////////////////////////////////////////////////////////////////
 //	the Travels class is defined to test out the 
 //	static declarations...
 //	we will use them to accumulate the number of
@@ -33,10 +33,14 @@ public:
 	~Travels(){}
 
 	//	accessors
-	int showtotaltrip() { return tottrip; }
 	void totaltravel() { totdistance += tripdistance; }
-	int showtotaldis() { return totdistance; }
-	string showtravellocations() { return travelname; }
+
+	//	we have declared these functions as const
+	//	since they only return and not modify the
+	//	data in the object
+	int showtotaldis() const { return totdistance; }
+	string showtravellocations() const { return travelname; }
+	int showtotaltrip() const { return tottrip; }
 
 	// setters
 	void gettravelinfo() {
@@ -47,12 +51,13 @@ public:
 		cin >> tripdistance;
 	}
 };
-
+////////////////////////////////////////////////////////////////////////////////
 //	defining the static vars
 //	we are using
 int Travels::tottrip = 0;
 int Travels::totdistance = 0;
 
+////////////////////////////////////////////////////////////////////////////////
 int main(){
 
 	//	set a limit to our array
@@ -89,3 +94,4 @@ int main(){
 	}
 	
 }
+////////////////////////////////////////////////////////////////////////////////
