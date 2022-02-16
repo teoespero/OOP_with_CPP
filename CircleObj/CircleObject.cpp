@@ -18,29 +18,45 @@ private:
 	double radius;
 public:
 	///////////////////////////////////////////////////////////////////////////
-	//	function declarations and definitions
-	Circle() :radius(0) {
-	}
-
-	~Circle() {
-	}
-
-	double getRadius() {
-		return radius;
-	}
-
-	double getArea() {
-		return (PI * radius * radius);
-	}
-
-	double getPerimeter() {
-		return (2 * PI * radius);
-	}
-
-	void setRadius(double theradius) {
-		radius = theradius;
-	}
+	//	function declarations 
+	Circle();
+	~Circle();
+	double getRadius();
+	double getArea();
+	double getPerimeter();
+	void setRadius(double theradius);
 };
+
+////////////////////////////////////////////////////////////////////////////////
+//	function definitions
+
+//	constructor
+Circle::Circle() :radius(0) {
+}
+
+//	destructor
+Circle::~Circle() {
+}
+
+//	getRadius member function
+double Circle::getRadius() {
+	return radius;
+}
+
+//	getArea member function
+double Circle::getArea() {
+	return (PI * radius * radius);
+}
+
+//	getPerimeter member function
+double Circle::getPerimeter() {
+	return (2 * PI * radius);
+}
+
+//	setRadius member function
+void Circle::setRadius(double theradius) {
+	radius = theradius;
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////
