@@ -1,4 +1,3 @@
-#pragma once
 ////////////////////////////////////////////////////////////////////////////////
 //  CircleObject.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //  Teodulfo Espero
@@ -6,23 +5,38 @@
 //  BS Software Development
 //  Western Governors University
 ////////////////////////////////////////////////////////////////////////////////
+#include <iostream>
 #include "circle.h"
 
 using namespace std;
 
 ////////////////////////////////////////////////////////////////////////////////
-//	creating the Circle object instance
-int main() {
-	Circle circle1;
-	circle1.setRadius(10); 
-	cout << "Radius: " << circle1.getRadius() << endl;
-	cout << "Area: " << circle1.getArea() << endl;
-	cout << "Perimeter: " << circle1.getPerimeter() << endl;
+//	function definitions
 
-	Circle circle2;
-	circle2.setRadius(20);
-	cout << "Radius: " << circle2.getRadius() << endl;
-	cout << "Area: " << circle2.getArea() << endl;
-	cout << "Perimeter: " << circle2.getPerimeter() << endl;
-	return 0;
+//	constructor
+Circle::Circle() :radius(0) {
+}
+
+//	destructor
+Circle::~Circle() {
+}
+
+//	getRadius member function
+double Circle::getRadius() {
+	return radius;
+}
+
+//	getArea member function
+double Circle::getArea() {
+	return (PI * radius * radius);
+}
+
+//	getPerimeter member function
+double Circle::getPerimeter() {
+	return (2 * PI * radius);
+}
+
+//	setRadius member function
+void Circle::setRadius(double theradius) {
+	radius = theradius;
 }
